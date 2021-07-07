@@ -1,0 +1,49 @@
+---
+layout: default
+title: Social Interactions in Robotics
+description: Social Interactions in Robotics
+featured_image: /images/social.gif
+---
+
+
+<section class="intro">
+
+	<div class="wrap">
+
+		<h1>Social Interactions in Robotics</h1>
+		<p>Investigating the social interactions in robotics through recursive MDPs by extending the reward function to include a combination of physical and social goals through multiple levels of reasoning.</p>
+	</div>
+
+</section>
+
+
+<section class="portfolio">
+
+	<div class="content-wrap portfolio-wrap">
+
+        {% for project in site.projects %}
+
+		<div class="portfolio-item " style="height:400px; width:400px;">
+
+			<a class="portfolio-item__link" href="{{ project.url | relative_url }}">
+
+				<div class="portfolio-item__image">
+					<img src="{{ project.featured_image | relative_url }}" alt="{{ project.title }}">
+				</div>
+
+				<div class="portfolio-item__content">
+					<div class="portfolio-item__info">
+						<h2 class="portfolio-item__title">{{ project.title }}</h2>
+						<p class="portfolio-item__subtitle">{{ project.subtitle }}</p>
+					</div>
+				</div>
+
+			</a>
+
+		</div>
+
+		{% endfor %}
+
+	</div>
+
+</section>
